@@ -1,2 +1,0 @@
-const name = 'Nikita';
-const 
