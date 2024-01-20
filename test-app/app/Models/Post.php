@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+//    связь с таблицей - posts
+    protected $table = 'posts';
+
+//  Указываем с какими полями может работать наша модель Post
+    protected  $fillable = [
+        'title',
+        'text',
+        'image'
+    ];
+
 }
