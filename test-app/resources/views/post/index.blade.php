@@ -31,6 +31,8 @@
                             <img width="150" height="150" src="/images/{{ $post->image }}" alt="">
                         </td>
                         <td>
+                            <a href="{{ route('post.edit', $post->id) }}" class="btn btn-success">Редактировать</a>
+                            <a href="" class="btn btn-warning">Подробнее</a>
                             <form method="POST" action="{{ route('post.delete', $post->id) }}">
                                 @csrf
                                 @method('DELETE')
