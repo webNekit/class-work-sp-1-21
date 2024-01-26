@@ -3,21 +3,23 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <a href="{{ route('tovar.create') }}" class="btn btn-primary">Новый товар</a>
-        </div>
-        <div class="row">
             @if($message = Session::get('success'))
                 <div class="alert alert-success">
                     {{ $message }}
                 </div>
             @endif
+        </div>
+        <div class="row">
+            <a href="{{ route('tovar.create') }}" class="btn btn-primary">Новый товар</a>
+        </div>
+        <div class="row">
             <table class="table">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Название поста</th>
                     <th scope="col">Описание поста</th>
-                    <th scope="col">Изображение</th>
+                    <th scope="col">Категория</th>
                     <th scope="col">Действие</th>
                 </tr>
                 </thead>
@@ -34,7 +36,7 @@
                             {{ $product->text }}
                         </td>
                         <td>
-                            {{ $product->category_id }}
+                            {{ $product->category->name }}
                         </td>
                         <td>
                             @if ($product->is_active == 0)
