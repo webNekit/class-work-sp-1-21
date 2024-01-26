@@ -8,7 +8,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Категория</label>
                 </div>
-                <select name="is_active" class="custom-select" id="inputGroupSelect01">
+                <select name="category_id" class="custom-select" id="inputGroupSelect01">
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
